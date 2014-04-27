@@ -7,10 +7,12 @@ class TextEntity extends Entity
 {
 
 
-    public function new(x:Float, y:Float, text:String, duration:Int=null,
-                        starts:Int=null, color:Int=0x202020, size:Int=20)
+    public function new(x:Float, y:Float, width:Int, heigh:Int,
+                        text:String, duration:Int=0, starts:Int=0,
+                        color:Int=0x202020, size:Int=20)
     {
         super(x, y);
+        //setHitbox(width, height);
 
         _text = new Text();
         _text.resizable = true;
@@ -21,23 +23,33 @@ class TextEntity extends Entity
         _starts = starts;
         _duration = duration;
         this._active = false;
-
         graphic = _text;
+        visible = false;
     }
 
-    public function activate()
+    public function activate(force:Bool=false)
     {
 
-        if(_duration == null) {
+        if(_duration == 0 && _starts == 0) {
             visible = true;
             _active = true;
             //trace("Duration is not set!");
             return;
         }
 
-        if(_active == false) {
+        if(_starts != 0 && !_active) {
+            _active = true;
+            var startTimer = new haxe.Timer(_starts);
+            startTimer.run = function() {
+                activate(true);
+                startTimer.stop();
+            }
+            return;
+        }
+
+
+        if(_active == false || force) {
             visible = true;
-            trace("HAI!" + _duration);
             _active = true;
             var timer = new haxe.Timer(_duration);
             timer.run = function() {

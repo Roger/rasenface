@@ -11,27 +11,22 @@ import com.haxepunk.tmx.TmxEntity;
 
 import entities.Character;
 import entities.TextEntity;
+import entities.EmptyEntity;
+
+using StringTools;
 
 class MainScene extends Scene
 {
     private var backdrop:Backdrop;
     public override function begin()
     {
-        //backdrop = new Backdrop("graphics/level0.png", false, false);
-        //addGraphic(backdrop);
-        //add(new Character(10, 445, "wake"));
-
-        //var entity:Entity = new Entity();
-        //entity.setHitbox(660, 300);
-        //entity.y = 565;
-        //entity.type = "solid";
-        //add(entity);
         loadMap();
     }
 
-    private function loadMap()
+    public function loadMap()
     {
-        var map = TmxMap.loadFromFile("maps/level0.tmx");
+        removeAll();
+        var map = TmxMap.loadFromFile("maps/"+currentMap+".tmx");
         var e_map = new TmxEntity(map);
 
         //e_map.loadImageLayer("background");
