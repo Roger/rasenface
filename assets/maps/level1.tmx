@@ -55,6 +55,7 @@
   </object>
   <object name="voice" type="text" x="160" y="295" width="85" height="33">
    <properties>
+    <property name="color" value="0x900101"/>
     <property name="duration" value="2500"/>
     <property name="etype" value="text"/>
     <property name="starts" value="400"/>

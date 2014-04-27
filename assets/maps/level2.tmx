@@ -26,7 +26,7 @@
   <object name="dead" type="dead" x="303" y="743" width="347" height="22"/>
   <object name="next level" type="gate" x="-4" y="336" width="16" height="286">
    <properties>
-    <property name="goto" value="level1"/>
+    <property name="goto" value="level3"/>
    </properties>
   </object>
   <object name="start" type="text" x="291" y="134" width="349" height="134">

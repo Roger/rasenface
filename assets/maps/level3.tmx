@@ -13,13 +13,13 @@
  </layer>
  <layer name="collision" width="64" height="48" opacity="0.32">
   <data encoding="base64" compression="zlib">
-   eJztmUsOhDAMQ+n9Lz2rSqPRQD/EjpPGErti50W0gnBd56p5F+AsNL96fxn1Kfeg+HNk7IpVm2oPmHUp9oBdk1oPij933kjFnztvpOLPnTdSJP4Guph6y2+taPzW9RY/V8Xvez/aD51n/QxE4+8eVnUXP1eWdVv1kinrvat2nrLz3r7HRuf/9t3xZs8/kXk7/sz5t2IW6/+Hxz6byWQ8j14zj5lstfMIoac6UDMFFfauu5oyzFRm9a8H3vzsWd2vjwI/Yu2sz4n83Qt1TkXgV/EsfszaKJ4n86+ePxH4V7+9MvGjeSLwr6wtftz6FV8PL4W93/UBaPAAzw==
+   eJztmcEOgzAMQ+H/f3ragcu0rU2JHTfYEjew86JSIBzHc3VWF1AsNL96fxn1KffA/D0yVsWqTbUHzLoUe8CuSa0H5u+dN5L5e+eNZP7eeSPtxH+CDqbu8mdrN/7ses3Plflrr0f7ofOy18Bu/JdHVt3m5yqz7qxesoS4d9X2U3bW3fdY5vwTmbXqz5p/q+Yw/n9V7LGzmYprkpmNqk9hzjHTgw7f1CP9q2f374lZ/VoLCP6VPZgxp/rmo7D+mXO6Ty8V/mzPWa8n8l9+qOdzxLP6PcX8tZ7mz/eMyPz5fhGmTvzR5wnq3IgqZ+nmx3lX+EZ5FPjfegHFHADS
   </data>
  </layer>
  <objectgroup name="objects" width="64" height="48">
   <object name="player" type="player" x="943" y="117" width="45" height="116">
    <properties>
-    <property name="animation" value="wake"/>
+    <property name="animation" value="idle"/>
     <property name="flipped" value="true"/>
    </properties>
   </object>
@@ -32,24 +32,25 @@
     <property name="visible" value="true"/>
    </properties>
   </object>
-  <object name="stairs" type="stairs" x="693" y="447" width="31" height="108"/>
+  <object name="stairs" type="stairs" x="655" y="426" width="31" height="108"/>
   <object name="dead" type="dead" x="300" y="751" width="722" height="13"/>
   <object name="next level" type="gate" x="652" y="716" width="68" height="16">
    <properties>
     <property name="goto" value="level3"/>
    </properties>
   </object>
-  <object name="fuck" type="text" x="542" y="296" width="87" height="42">
+  <object name="fuck" type="text" x="477" y="287" width="189" height="39">
    <properties>
     <property name="duration" value="800"/>
     <property name="etype" value="help"/>
     <property name="starts" value="0"/>
-    <property name="text" value="fuck..."/>
+    <property name="text" value="    frack...."/>
     <property name="visible" value="false"/>
    </properties>
   </object>
   <object name="helpme" type="text" x="447" y="210" width="87" height="42">
    <properties>
+    <property name="color" value="0x900101"/>
     <property name="duration" value="1800"/>
     <property name="etype" value="help"/>
     <property name="starts" value="100"/>
@@ -57,7 +58,7 @@
     <property name="visible" value="true"/>
    </properties>
   </object>
-  <object name="fuck" type="text" x="540" y="500" width="87" height="42">
+  <object name="fuck" type="text" x="458" y="496" width="189" height="43">
    <properties>
     <property name="duration" value="1000"/>
     <property name="etype" value="help"/>

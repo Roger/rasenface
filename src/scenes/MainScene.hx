@@ -47,7 +47,10 @@ class MainScene extends Scene
                  var player:Character = new Character(object.x, object.y, anim, flipped);
                  add(player);
              case "text":
+                 var color:Int = 0x202020;
                  var text:String = object.custom.resolve("text");
+                 var colorStr:String = object.custom.resolve("color");
+                 if(colorStr != null) color = Std.parseInt(colorStr);
                  text = text.replace("\\n", "\n");
                  var duration:Int = 0;
                  var starts:Int = 0;
@@ -62,7 +65,7 @@ class MainScene extends Scene
 
                  var etype = object.custom.resolve("etype");
                  var entity:TextEntity = new TextEntity(object.x, object.y,object.width, object.height,
-                                                        text, duration, starts);
+                                                        text, duration, starts, color);
                  entity.type = etype;
                  var visible:Bool = object.custom.resolve("visible") != "false";
                  if(visible) entity.activate();

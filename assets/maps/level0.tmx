@@ -57,6 +57,7 @@
   </object>
   <object name="helpme" type="text" x="381" y="514" width="87" height="42">
    <properties>
+    <property name="color" value="0x900101"/>
     <property name="duration" value="1800"/>
     <property name="etype" value="help"/>
     <property name="starts" value="100"/>
