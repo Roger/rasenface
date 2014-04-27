@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="64" height="48" tilewidth="16" tileheight="16" backgroundcolor="#bfbfbf">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
+  <image source="../graphics/tileset.png" trans="ff00ff" width="64" height="64"/>
+ </tileset>
+ <imagelayer name="background" width="64" height="48">
+  <image source="../graphics/level2.png"/>
+ </imagelayer>
+ <layer name="layer" width="64" height="48">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAIB3AzAAAAE=
+  </data>
+ </layer>
+ <layer name="collision" width="64" height="48" opacity="0.32">
+  <data encoding="base64" compression="zlib">
+   eJzt11kKwzAQBFHp/pf2FTSj1myuB/5LCxWGkKwFAAAAAPPt7Asko3+uffhMddJG/1z0az7T1V/6b77bp/RnbKugP2dbBf052yroz9lW0aXf8zvl9X9Y79bbYr3D6/dz0289j37dRoV+7Y7+mI0K/dpdx37vY71v1f6o8+jXbVTojzuPft1Ghf648+jXbZQ+ZxoAsQ==
+  </data>
+ </layer>
+ <objectgroup name="objects" width="64" height="48">
+  <object name="player" type="player" x="915" y="119" width="45" height="116">
+   <properties>
+    <property name="animation" value="idle"/>
+    <property name="flipped" value="true"/>
+   </properties>
+  </object>
+  <object name="dead" type="dead" x="303" y="743" width="347" height="22"/>
+  <object name="next level" type="gate" x="-4" y="336" width="16" height="286">
+   <properties>
+    <property name="goto" value="level1"/>
+   </properties>
+  </object>
+  <object name="start" type="text" x="291" y="134" width="349" height="134">
+   <properties>
+    <property name="duration" value="5000"/>
+    <property name="etype" value="text"/>
+    <property name="text" value="Where am i.. this cave.. that voice..\nI need to go deeper\nI need answers.."/>
+    <property name="visible" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="64" height="48" tilewidth="16" tileheight="16" backgroundcolor="#bfbfbf">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
+  <image source="../graphics/tileset.png" trans="ff00ff" width="64" height="64"/>
+ </tileset>
+ <imagelayer name="background" width="64" height="48">
+  <image source="../graphics/level1.png"/>
+ </imagelayer>
+ <layer name="layer" width="64" height="48">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAIB3AzAAAAE=
+  </data>
+ </layer>
+ <layer name="collision" width="64" height="48" opacity="0.32">
+  <data encoding="base64" compression="zlib">
+   eJztz8ENgCAUBFHov2ljA2KECSt/JuFEXHmtPdcH96env3b6a6e/dvprp792+s/tjU3/uY1sJ9vv9M/d/70d/j55Vr9l5p74J/Xtlz39zKHeu3uPTn/2Hp3+7D06/dl7dPqz9+j0Z+/R6c/eo9OfvUenP3uPTn/2Hp3+7D06/dl7dPqz9+j0r+8CvWkAfg==
+  </data>
+ </layer>
+ <objectgroup name="objects" width="64" height="48">
+  <object name="player" type="player" x="620" y="167" width="45" height="116">
+   <properties>
+    <property name="animation" value="wake"/>
+    <property name="flipped" value="true"/>
+   </properties>
+  </object>
+  <object name="dead" type="dead" x="701" y="749" width="325" height="21"/>
+  <object name="next level" type="gate" x="124" y="228" width="27" height="111">
+   <properties>
+    <property name="goto" value="level2"/>
+   </properties>
+  </object>
+  <object name="pointy" type="text" x="276" y="253" width="31" height="44">
+   <properties>
+    <property name="duration" value="1500"/>
+    <property name="etype" value="help"/>
+    <property name="text" value="AWWW.. damn pointy thing"/>
+    <property name="visible" value="false"/>
+   </properties>
+  </object>
+  <object name="start" type="text" x="208" y="403" width="349" height="134">
+   <properties>
+    <property name="duration" value="3000"/>
+    <property name="etype" value="text"/>
+    <property name="text" value="You wake up.. you fall from the stairs.."/>
+    <property name="visible" value="true"/>
+   </properties>
+  </object>
+  <object name="die" type="text" x="696" y="426" width="310" height="74">
+   <properties>
+    <property name="duration" value="2000"/>
+    <property name="etype" value="help"/>
+    <property name="text" value="I don't want to live anymore.."/>
+    <property name="visible" value="false"/>
+   </properties>
+  </object>
+  <object name="voice" type="text" x="160" y="295" width="85" height="33">
+   <properties>
+    <property name="duration" value="2500"/>
+    <property name="etype" value="text"/>
+    <property name="starts" value="400"/>
+    <property name="text" value="j0hn.. help me.."/>
+    <property name="visible" value="true"/>
+   </properties>
+  </object>
+  <object name="youkeep" type="text" x="158" y="88" width="179" height="37">
+   <properties>
+    <property name="duration" value="2000"/>
+    <property name="etype" value="text"/>
+    <property name="starts" value="1000"/>
+    <property name="text" value="You keep hearing that voice from the crack.."/>
+    <property name="visible" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
