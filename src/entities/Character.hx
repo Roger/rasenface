@@ -18,6 +18,8 @@ class Character extends Entity
         sprite.add("walk", [6, 7, 8, 9, 10, 11], 15, true);
         sprite.add("wake", [12, 13, 14, 15, 16, 17], 10, false);
         sprite.add("jump", [15, 16], 10, false);
+        sprite.add("stairs", [18, 19, 20], 8, false);
+        sprite.add("stairs2", [19, 20, 20], 8, true);
         graphic = sprite;
         sprite.flipped = flipped;
         sprite.play(anim);
@@ -47,21 +49,18 @@ class Character extends Entity
 
     override public function moveCollideY(e:Entity)
     {
-        if(e.type == "solid") {
-            if(jumpTime == 0) {
-                inJump = false;
-            }
-            jumpTime = 0;
-         } else if(e.type == "help") {
-             //e.visible = true;
-             cast(e, TextEntity).activate();
-             return false;
-         }
-         return true;
-     }
+        return moveCollideXY(e, "Y");
+    }
 
     override public function moveCollideX(e:Entity)
     {
+        return moveCollideXY(e, "X");
+    }
+
+    private function moveCollideXY(e:Entity, xoy:String)
+    {
+        var world:scenes.MainScene = cast(this.world, scenes.MainScene);
+
         if(e.type == "solid") {
             if(jumpTime == 0) {
                 inJump = false;
@@ -71,10 +70,22 @@ class Character extends Entity
              //e.visible = true;
              cast(e, TextEntity).activate();
              return false;
+         } else if(e.type == "stairs") {
+             if (inJump) return false;
+             //this.active = false;
+             //sprite.play("stairs");
+             animation = "stairs";
+             return false;
+         } else if(e.type == "gate") {
+             var goto:String = cast(e, EmptyEntity).data.get("goto");
+             world.currentMap = goto;
+             world.loadMap();
+         } else if(e.type == "dead") {
+             // You are dead..
+             world.loadMap();
          }
          return true;
     }
-
 
     public override function update()
     {
@@ -83,6 +94,17 @@ class Character extends Entity
         }
 
         handleInput();
+        if(animation == "stairs") {
+            if(sprite.currentAnim != "stairs2" && sprite.currentAnim != "stairs" && !sprite.complete)
+            {
+                sprite.play("stairs");
+                moveBy(36, 36);
+            } else {
+                sprite.play("stairs2");
+                moveBy(0, 2, ["dead", "gate"]);
+            }
+            return;
+        };
 
         var ySpeed:Float = 4;
         if(inJump == true && jumpTime > 0) {
@@ -91,7 +113,7 @@ class Character extends Entity
         }
 
 
-        this.moveBy(acceleration, ySpeed, ["solid", "help"]);
+        moveBy(acceleration, ySpeed, ["solid", "help", "stairs", "dead", "gate"]);
         updateAnimation();
     }
 
@@ -126,5 +148,6 @@ class Character extends Entity
     private var acceleration:Float;
     private var inJump:Bool;
     private var jumpTime:Int = 0;
+    private var animation:String = null;
 }
 
