@@ -13,17 +13,10 @@
  </layer>
  <layer name="collision" width="64" height="48" opacity="0.32">
   <data encoding="base64" compression="zlib">
-   eJzt1rENADAMw7D0/6d7RYZAJOADtHkGAAAAAAAAAADueodWpr9Nf5v+Nv1t+rvq/3ez/QOYggA5
+   eJzt1sEJACEAA0Htv+mrIkguM+A3uL48BwAA4P/u6ws8pn/7DfTr179Lv379u/Tr179Lv379u/Tr199zEv0t9Hdspujv2EzR37GZor9jM0V/x2bC+v83ec8P5UoAcA==
   </data>
  </layer>
  <objectgroup name="objects" width="64" height="48">
-  <object name="help" type="text" x="389" y="523" width="39" height="28">
-   <properties>
-    <property name="etype" value="help"/>
-    <property name="text" value="Please J0hn, help.."/>
-    <property name="visible" value="false"/>
-   </properties>
-  </object>
   <object name="player" type="player" x="13" y="439" width="45" height="116">
    <properties>
     <property name="animation" value="wake"/>
@@ -33,7 +26,7 @@
    <properties>
     <property name="duration" value="2000"/>
     <property name="etype" value="text"/>
-    <property name="starts" value="2"/>
+    <property name="starts" value="250"/>
     <property name="text" value="where am i.."/>
     <property name="visible" value="true"/>
    </properties>
@@ -43,6 +36,39 @@
     <property name="duration" value="3000"/>
     <property name="etype" value="help"/>
     <property name="text" value="who am i?"/>
+    <property name="visible" value="false"/>
+   </properties>
+  </object>
+  <object name="stairs" type="stairs" x="693" y="447" width="31" height="108"/>
+  <object name="dead" type="dead" x="701" y="749" width="325" height="21"/>
+  <object name="next level" type="gate" x="653" y="730" width="68" height="16">
+   <properties>
+    <property name="goto" value="level1"/>
+   </properties>
+  </object>
+  <object name="iknow" type="text" x="391" y="456" width="87" height="42">
+   <properties>
+    <property name="duration" value="2500"/>
+    <property name="etype" value="help"/>
+    <property name="starts" value="300"/>
+    <property name="text" value="I know that voice.. and that name.. am i j0hn?"/>
+    <property name="visible" value="false"/>
+   </properties>
+  </object>
+  <object name="helpme" type="text" x="381" y="514" width="87" height="42">
+   <properties>
+    <property name="duration" value="1800"/>
+    <property name="etype" value="help"/>
+    <property name="starts" value="100"/>
+    <property name="text" value="Please J0hn, help.."/>
+    <property name="visible" value="false"/>
+   </properties>
+  </object>
+  <object name="die" type="text" x="701" y="604" width="310" height="74">
+   <properties>
+    <property name="duration" value="2000"/>
+    <property name="etype" value="help"/>
+    <property name="text" value="I don't want to live anymore.."/>
     <property name="visible" value="false"/>
    </properties>
   </object>
