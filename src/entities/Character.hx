@@ -9,7 +9,7 @@ import com.haxepunk.graphics.Spritemap;
 
 class Character extends Entity
 {
-    public function new(x:Float, y:Float, anim:String="wake")
+    public function new(x:Float, y:Float, anim:String="wake", flipped:Bool=false)
     {
         super(x, y);
 
@@ -19,6 +19,7 @@ class Character extends Entity
         sprite.add("wake", [12, 13, 14, 15, 16, 17], 10, false);
         sprite.add("jump", [15, 16], 10, false);
         graphic = sprite;
+        sprite.flipped = flipped;
         sprite.play(anim);
 
         setHitbox(52, 120);
