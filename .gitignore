@@ -1,0 +1,5 @@
+bin/
+
+# vaxe config
+project.xml.hxml
+.hxml

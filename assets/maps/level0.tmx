@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="64" height="48" tilewidth="16" tileheight="16" backgroundcolor="#bfbfbf">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
+  <image source="../graphics/tileset.png" trans="ff00ff" width="64" height="64"/>
+ </tileset>
+ <imagelayer name="background" width="64" height="48">
+  <image source="../graphics/level0.png"/>
+ </imagelayer>
+ <layer name="layer" width="64" height="48">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAIB3AzAAAAE=
+  </data>
+ </layer>
+ <layer name="collision" width="64" height="48" opacity="0.32">
+  <data encoding="base64" compression="zlib">
+   eJzt1rENADAMw7D0/6d7RYZAJOADtHkGAAAAAAAAAADueodWpr9Nf5v+Nv1t+rvq/3ez/QOYggA5
+  </data>
+ </layer>
+ <objectgroup name="objects" width="64" height="48">
+  <object name="help" type="text" x="389" y="523" width="39" height="28">
+   <properties>
+    <property name="etype" value="help"/>
+    <property name="text" value="Please J0hn, help.."/>
+    <property name="visible" value="false"/>
+   </properties>
+  </object>
+  <object name="player" type="player" x="13" y="439" width="45" height="116">
+   <properties>
+    <property name="animation" value="wake"/>
+   </properties>
+  </object>
+  <object name="wake" type="text" x="16" y="386" width="179" height="31">
+   <properties>
+    <property name="duration" value="2000"/>
+    <property name="etype" value="text"/>
+    <property name="starts" value="2"/>
+    <property name="text" value="where am i.."/>
+    <property name="visible" value="true"/>
+   </properties>
+  </object>
+  <object name="who am i" type="text" x="186" y="463" width="183" height="30">
+   <properties>
+    <property name="duration" value="3000"/>
+    <property name="etype" value="help"/>
+    <property name="text" value="who am i?"/>
+    <property name="visible" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
