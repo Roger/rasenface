@@ -13,11 +13,11 @@
  </layer>
  <layer name="collision" width="64" height="48" opacity="0.32">
   <data encoding="base64" compression="zlib">
-   eJzt2UEKgDAMAMH2/5+WgN6a0Ei9uDvQWxG2qEgc47/mvajo7dR+25nI7YHcHuznIjz7WSOh/TGLJWXo9wypdcV+Nvs9A+J7f8UzsN97wH772exns5/Nfq6T33+duVp3DvfV3O7NdXZnz9W+an5/av/u6iI/L8F+Bvo/Jkpnxn42+znI73mJ7gJ7UQCM
+   eJztmUsKwCAMBfX+ly6FZucnEbtI3gxkZSwda6TE1urSv1iNV2bnV9l/9+2bYzwrHnfLq4bX3XIrEXG3/EpEffCvhbJ/tPZtTiZmjifuNi8bfREnz1JGyf/WnsmKkusI/LXBnzVQPPdHsAb4swfwx18b/LXBXxv8dbn5/xfpq0X7cH/17U7vCzzvs8pb9e9v5XsjinK9vOCvwc2ayYiK5wz8tcFfB+VzHkCdB5CjAJk=
   </data>
  </layer>
  <objectgroup name="objects" width="64" height="48">
-  <object name="player" type="player" x="974" y="84" width="45" height="116">
+  <object name="player" type="player" x="939" y="87" width="45" height="116">
    <properties>
     <property name="animation" value="idle"/>
     <property name="flipped" value="true"/>
