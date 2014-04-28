@@ -36,7 +36,7 @@
   <object name="dead" type="dead" x="300" y="751" width="722" height="13"/>
   <object name="next level" type="gate" x="652" y="716" width="68" height="16">
    <properties>
-    <property name="goto" value="level3"/>
+    <property name="goto" value="level4"/>
    </properties>
   </object>
   <object name="fuck" type="text" x="477" y="287" width="189" height="39">

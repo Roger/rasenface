@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="64" height="48" tilewidth="16" tileheight="16" backgroundcolor="#bfbfbf">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
+  <image source="../graphics/tileset.png" trans="ff00ff" width="64" height="64"/>
+ </tileset>
+ <imagelayer name="background" width="64" height="48">
+  <image source="../graphics/level5.png"/>
+ </imagelayer>
+ <layer name="layer" width="64" height="48">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAIB3AzAAAAE=
+  </data>
+ </layer>
+ <layer name="collision" width="64" height="48" opacity="0.32">
+  <data encoding="base64" compression="zlib">
+   eJzt2UEKgDAMAMH2/5+WgN6a0Ei9uDvQWxG2qEgc47/mvajo7dR+25nI7YHcHuznIjz7WSOh/TGLJWXo9wypdcV+Nvs9A+J7f8UzsN97wH772exns5/Nfq6T33+duVp3DvfV3O7NdXZnz9W+an5/av/u6iI/L8F+Bvo/Jkpnxn42+znI73mJ7gJ7UQCM
+  </data>
+ </layer>
+ <objectgroup name="objects" width="64" height="48">
+  <object name="start1" type="text" x="276" y="109" width="331" height="37">
+   <properties>
+    <property name="duration" value="2000000"/>
+    <property name="etype" value="text"/>
+    <property name="text" value="So here i'am.. Rory Williams"/>
+    <property name="visible" value="true"/>
+   </properties>
+  </object>
+  <object name="start2" type="text" x="276" y="215" width="331" height="37">
+   <properties>
+    <property name="color" value="0x600000"/>
+    <property name="duration" value="2000000"/>
+    <property name="etype" value="text"/>
+    <property name="starts" value="4000"/>
+    <property name="text" value="And my wife..."/>
+    <property name="visible" value="true"/>
+   </properties>
+  </object>
+  <object name="start3" type="text" x="277" y="276" width="333" height="35">
+   <properties>
+    <property name="color" value="0xa00101"/>
+    <property name="duration" value="2000000"/>
+    <property name="etype" value="text"/>
+    <property name="starts" value="5000"/>
+    <property name="text" value="Then.. i killed my self.."/>
+    <property name="visible" value="true"/>
+   </properties>
+  </object>
+  <object name="start22" type="text" x="276" y="165" width="331" height="36">
+   <properties>
+    <property name="color" value="0x400000"/>
+    <property name="duration" value="2000000"/>
+    <property name="etype" value="text"/>
+    <property name="starts" value="3000"/>
+    <property name="text" value="I killed my best friend.."/>
+    <property name="visible" value="true"/>
+   </properties>
+  </object>
+  <object name="end" type="text" x="380" y="332" width="145" height="44">
+   <properties>
+    <property name="duration" value="2000000"/>
+    <property name="etype" value="text"/>
+    <property name="starts" value="6500"/>
+    <property name="text" value="The End"/>
+    <property name="visible" value="true"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="64" height="48" tilewidth="16" tileheight="16" backgroundcolor="#bfbfbf">
+ <tileset firstgid="1" name="tileset" tilewidth="16" tileheight="16">
+  <image source="../graphics/tileset.png" trans="ff00ff" width="64" height="64"/>
+ </tileset>
+ <imagelayer name="background" width="64" height="48">
+  <image source="../graphics/level4.png"/>
+ </imagelayer>
+ <layer name="layer" width="64" height="48">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20ND6AAAAAAAAAAAAAAAIB3AzAAAAE=
+  </data>
+ </layer>
+ <layer name="collision" width="64" height="48" opacity="0.32">
+  <data encoding="base64" compression="zlib">
+   eJzt2UEKgDAMAMH2/5+WgN6a0Ei9uDvQWxG2qEgc47/mvajo7dR+25nI7YHcHuznIjz7WSOh/TGLJWXo9wypdcV+Nvs9A+J7f8UzsN97wH772exns5/Nfq6T33+duVp3DvfV3O7NdXZnz9W+an5/av/u6iI/L8F+Bvo/Jkpnxn42+znI73mJ7gJ7UQCM
+  </data>
+ </layer>
+ <objectgroup name="objects" width="64" height="48">
+  <object name="player" type="player" x="974" y="84" width="45" height="116">
+   <properties>
+    <property name="animation" value="idle"/>
+    <property name="flipped" value="true"/>
+   </properties>
+  </object>
+  <object name="next level" type="gate" x="-8" y="416" width="16" height="286">
+   <properties>
+    <property name="goto" value="level5"/>
+   </properties>
+  </object>
+  <object name="start1" type="text" x="275" y="112" width="334" height="60">
+   <properties>
+    <property name="duration" value="20000"/>
+    <property name="etype" value="text"/>
+    <property name="text" value="I start to remember.. \nI'm not j0hn.. he was my friend"/>
+    <property name="visible" value="true"/>
+   </properties>
+  </object>
+  <object name="start2" type="text" x="275" y="182" width="334" height="60">
+   <properties>
+    <property name="color" value="0x400000"/>
+    <property name="duration" value="2000000"/>
+    <property name="etype" value="text"/>
+    <property name="starts" value="2000"/>
+    <property name="text" value="But i found him with my wife.."/>
+    <property name="visible" value="true"/>
+   </properties>
+  </object>
+  <object name="start3" type="text" x="275" y="247" width="333" height="35">
+   <properties>
+    <property name="color" value="0xa00101"/>
+    <property name="duration" value="2000000"/>
+    <property name="etype" value="text"/>
+    <property name="starts" value="3000"/>
+    <property name="text" value="So i killed him.."/>
+    <property name="visible" value="true"/>
+   </properties>
+  </object>
+  <object name="iknow" type="text" x="179" y="453" width="147" height="46">
+   <properties>
+    <property name="color" value="0xff0000"/>
+    <property name="duration" value="2500"/>
+    <property name="etype" value="help"/>
+    <property name="starts" value="100"/>
+    <property name="text" value="I'm a murder.."/>
+    <property name="visible" value="false"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
